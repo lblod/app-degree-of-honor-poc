@@ -35,3 +35,13 @@ services:
       - virtuoso:database
     volumes:
       - ./config/migrations:/data/migrations
+  app-degree-of-honor:
+      image: semtech/mu-javascript-template
+      ports:
+        - 8888:80
+      environment:
+        NODE_ENV: "development"
+      links:
+        - virtuoso:database
+      volumes:
+        - C:\Users\jonke\OneDrive\Bureaublad\overheid\app-degree-of-honor-service:/app/
